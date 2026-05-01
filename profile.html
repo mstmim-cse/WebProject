@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | UIU Lost & Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-search-location"></i> UIU L&F
+            </a>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="post.html" class="nav-link">Post Item</a></li>
+                <li><a href="profile.html" class="nav-link active">Profile</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="settings.html" class="btn-icon"><i class="fas fa-cog"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <!-- User Info Card -->
+            <div class="card" style="padding: 32px; display: flex; gap: 24px; align-items: center; margin-bottom: 40px; flex-wrap: wrap;">
+                <img src="https://ui-avatars.com/api/?name=John+Doe&background=f97316&color=fff&size=128" alt="User Avatar" style="width: 100px; height: 100px; border-radius: 50%;">
+                <div style="flex: 1;">
+                    <h2 style="margin-bottom: 4px; display: flex; align-items: center;">John Doe <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 1.25rem; margin-left: 8px;" title="Verified UIU Email"></i></h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 12px;"><i class="fas fa-id-card"></i> Student ID: 011231234</p>
+                    <div style="display: flex; gap: 16px;">
+                        <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Trust Score: 98%</span>
+                        <span class="badge badge-success">3 Items Returned</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="settings.html" class="btn btn-secondary">Edit Profile</a>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs" data-parent="profileContent">
+                <div class="tab active" data-target="lostTab">My Lost Posts</div>
+                <div class="tab" data-target="foundTab">My Found Posts</div>
+                <div class="tab" data-target="rewardsTab">Rewards</div>
+                <div class="tab" data-target="settingsTab">Settings</div>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="profileContent">
+                <!-- Lost Posts -->
+                <div class="tab-content active" id="lostTab">
+                    <div class="grid grid-cols-3">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Charger" class="card-img" loading="lazy">
+                            <div class="card-body">
+                                <div class="mb-1"><span class="badge badge-lost">Lost</span></div>
+                                <h3 class="card-title">MacBook Pro Charger</h3>
+                                <p class="card-text">Lost my Apple 61W USB-C Power Adapter...</p>
+                                <div class="card-footer">
+                                    <span style="font-size: 0.875rem; color: var(--text-secondary);">Yesterday</span>
+                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Found Posts -->
+                <div class="tab-content" id="foundTab">
+                    <div class="grid grid-cols-3">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Wallet" class="card-img" loading="lazy">
+                            <div class="card-body">
+                                <div class="mb-1"><span class="badge badge-returned">Returned</span></div>
+                                <h3 class="card-title">Black Leather Wallet</h3>
+                                <p class="card-text">Successfully returned to owner.</p>
+                                <div class="card-footer">
+                                    <span style="font-size: 0.875rem; color: var(--text-secondary);">Oct 12, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rewards -->
+                <div class="tab-content" id="rewardsTab">
+                    <div class="card" style="padding: 40px; text-align: center;">
+                        <i class="fas fa-trophy" style="font-size: 4rem; color: var(--warning); margin-bottom: 16px;"></i>
+                        <h3>Good Samaritan Level 2</h3>
+                        <p style="color: var(--text-secondary); max-width: 400px; margin: 16px auto;">You've successfully returned 3 items to their rightful owners. Thank you for making UIU a better place!</p>
+                        <div style="background-color: var(--bg-color); border-radius: var(--radius-full); height: 8px; max-width: 300px; margin: 24px auto; overflow: hidden;">
+                            <div style="width: 60%; background-color: var(--primary); height: 100%;"></div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: var(--text-secondary);">2 more returns to reach Level 3</p>
+                    </div>
+                </div>
+
+                <!-- Settings -->
+                <div class="tab-content" id="settingsTab">
+                    <div class="card" style="padding: 32px;">
+                        <h3 style="margin-bottom: 24px;">Profile Settings</h3>
+                        
+                        <div class="grid grid-cols-2" style="gap: 32px;">
+                            <!-- Left Column: Form -->
+                            <div>
+                                <form>
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" value="John Doe">
+                                    </div>
+                                    <div class="form-group" style="position: relative;">
+                                        <label class="form-label">Change Password</label>
+                                        <div style="position: relative;">
+                                            <input type="password" class="form-control" id="profileNewPassword" placeholder="New Password">
+                                            <i class="fas fa-eye toggle-password" data-target="profileNewPassword" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-secondary);"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="position: relative;">
+                                        <label class="form-label">Confirm New Password</label>
+                                        <div style="position: relative;">
+                                            <input type="password" class="form-control" id="profileConfirmPassword" placeholder="Confirm Password">
+                                            <i class="fas fa-eye toggle-password" data-target="profileConfirmPassword" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-secondary);"></i>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary mt-2">Save Changes</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Right Column: Avatar & Activity -->
+                            <div>
+                                <div style="margin-bottom: 32px;">
+                                    <label class="form-label">Profile Picture</label>
+                                    <div style="display: flex; gap: 16px; align-items: center; margin-top: 8px;">
+                                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=f97316&color=fff&size=128" alt="Preview" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                                        <div>
+                                            <button type="button" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.875rem;">Upload New</button>
+                                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 8px;">JPG, GIF or PNG. Max size of 2MB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 style="margin-bottom: 16px;">Recent Activity</h4>
+                                    <ul style="border-left: 2px solid var(--border-color); padding-left: 16px; display: flex; flex-direction: column; gap: 16px;">
+                                        <li style="position: relative;">
+                                            <span style="position: absolute; left: -21px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--primary);"></span>
+                                            <p style="font-size: 0.875rem; font-weight: 500;">Claimed a lost charger</p>
+                                            <span style="font-size: 0.75rem; color: var(--text-secondary);">2 days ago</span>
+                                        </li>
+                                        <li style="position: relative;">
+                                            <span style="position: absolute; left: -21px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--success);"></span>
+                                            <p style="font-size: 0.875rem; font-weight: 500;">Reported a found wallet</p>
+                                            <span style="font-size: 0.75rem; color: var(--text-secondary);">Oct 12, 2026</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--surface-color); padding: 40px 0; border-top: 1px solid var(--border-color); text-align: center; margin-top: 40px;">
+        <div class="container">
+            <p style="color: var(--text-secondary); font-size: 0.875rem;">&copy; 2026 UIU Lost & Found.</p>
+        </div>
+    </footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
